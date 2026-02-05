@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+my-expo-app/
+
+
 # Expo
 .expo/
 dist/
