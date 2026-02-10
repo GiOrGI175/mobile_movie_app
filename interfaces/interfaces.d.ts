@@ -15,12 +15,11 @@ export interface Movie {
   vote_count: number;
 }
 
-interface TrendingMovie {
-  searchTerm: string;
-  movie_id: number;
+export interface TrendingMovie {
+  id: number;
   title: string;
-  count: number;
-  poster_url: string;
+  poster_path: string;
+  index: number;
 }
 
 interface MovieDetails {

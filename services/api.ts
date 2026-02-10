@@ -27,6 +27,22 @@ export const fetchMovies = async ({ query }: { query: string }) => {
   return data.results;
 };
 
+export const fetchTrendingMovies = async () => {
+  const endpoint = `${TMDB_CONFIG.BASE_URL}/trending/movie/day`;
+
+  const response = await fetch(endpoint, {
+    headers: TMDB_CONFIG.headers,
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed: ${response.status}`);
+  }
+
+  const data = await response.json();
+
+  return data.results;
+};
+
 // const url = 'https://api.themoviedb.org/3/authentication';
 // const options = {
 //   method: 'GET',
