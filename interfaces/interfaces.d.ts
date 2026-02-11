@@ -22,7 +22,7 @@ export interface TrendingMovie {
   index: number;
 }
 
-interface MovieDetails {
+export interface MovieDetails {
   adult: boolean;
   backdrop_path: string | null;
   belongs_to_collection: {
